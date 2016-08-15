@@ -31,24 +31,29 @@ block content
             td
               form(action="delete/#{page.id}", method="get")
                 button(class="btn btn-small btn-primary" type="submit" disabled) Delete
-        tr
-        form(action="../create", method="post")
-          input(type="hidden", name="type", value="page")
-          td
-            input(type="text", name="path", value="path", id="newPagePathField")
-          td
-            input(type="text", name="title", value="title")
-          td
-            input(type="text", name="text", value="text")
-          td
-            input(type="text", name="options", value="options []")
-          td
-            input(type="text", name="optionLinks", value="links []")
-          td
-            button(class="btn btn-small btn-primary", disabled) Read
-          td
-            button(class="btn btn-small btn-primary", disabled) Edit
-          td
-            button(class="btn btn-small btn-primary" type="submit") Create
-    form(action="../view", method="get")
-      button(class="btn btn-small btn-primary" type="submit") Back
+    br
+    div(style="padding:30px")
+      div(style="text-align: center;")
+        h1 Create New Page
+      form(action="../create", method="post")
+        input(type="hidden", name="type", value="")
+        p(style="margin:10px;") Path
+          input(type="text", name="path", value="", id="newPagePathField")
+        p(style="margin:10px;") Page Title
+          input(type="text", name="title", value="")
+        p(style="margin:10px;") Page Text
+          textarea(type="text", name="text", value="")
+
+        table(class="table table-striped")
+          thead
+            tr
+              th Option Name
+              th Option Path
+          tbody(id="newPageOptions")
+        button(class="btn btn-small btn-primary" onclick="var table = document.getElementById('newPageOptions'); var tableRow = table.insertRow(table.rows.length); var c0 = tableRow.insertCell(0); var c1 = tableRow.insertCell(1); var c2 = tableRow.insertCell(2); var c2 = tableRow.insertCell(2); var t1 = document.createElement('input'); var t2 = document.createElement('input'); t1.type = 'text'; t2.type = 'text'; t1.id = table.rows.length; t1.name = 'name'; t2.id = table.rows.length; t2.name = 'name'; c0.appendChild(t1); c1.appendChild(t2);") Add Option
+
+        input(type="hidden", name="options", value="[]")
+        input(type="hidden", name="optionLinks", value="[]")
+        button(class="btn btn-small btn-primary" type="submit") Create
+      form(action="../view", method="get")
+        button(class="btn btn-small btn-primary" style="position:fixed; bottom:0; right:0; margin:2em 2em 2em 2em" type="submit") Back
