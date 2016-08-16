@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b64ec34-5ebd-4205-83df-6a3aed2ff944" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/create.js" afterPath="$PROJECT_DIR$/routes/create.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/edit.jade" afterPath="$PROJECT_DIR$/views/edit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/utility.js" afterPath="$PROJECT_DIR$/node_modules/utility.js" />
     </list>
     <ignored path="pythagorgamebook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +78,8 @@
       <file leaf-file-name="edit.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/edit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75535166">
-              <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.72477067">
+              <caret line="52" column="584" selection-start-line="52" selection-start-column="584" selection-end-line="52" selection-end-column="584" />
               <folding />
             </state>
           </provider>
@@ -504,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/edit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75535166">
-          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.72477067">
+          <caret line="52" column="584" selection-start-line="52" selection-start-column="584" selection-end-line="52" selection-end-column="584" />
           <folding />
         </state>
       </provider>
