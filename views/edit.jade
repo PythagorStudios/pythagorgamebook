@@ -51,8 +51,8 @@ block content
               th Option Path
           tbody(id="newPageOptions")
         button(class="btn btn-small btn-primary" type="button" style="margin:1em 1em 1em 1em" onclick="var table = document.getElementById('newPageOptions'); if (table.rows.length < 5) {var tableRow = table.insertRow(table.rows.length); var c0 = tableRow.insertCell(0); var c1 = tableRow.insertCell(1); var t1 = document.createElement('input'); var t2 = document.createElement('input'); t1.style='float:left'; t1.type = 'text'; t2.style='float:left'; t2.type = 'text'; t1.name = 'n' + table.rows.length; t2.value = document.getElementById('newPagePathField').value + '/' + table.rows.length; t2.name = 'p' + table.rows.length; c0.appendChild(t1); c1.appendChild(t2);} else { alert('Maximum 5 options'); }") Add Option
-          button(type="button" onclick="document.getElementById('newPageFormDiv').style.display = 'none';") Cancel
+          button(type="button" onclick="var table = document.getElementById('newPageOptions'); table.innerHTML = ''; document.getElementById('newPageFormDiv').style.display = 'none';") Cancel
             button(class="btn btn-small btn-primary" style="margin:1em 1em 1em 1em" type="submit") Create
 
-      form(action="../view", method="get")
-        button(class="btn btn-small btn-primary" style="position:fixed; bottom:0; right:0; margin:2em 2em 2em 2em" type="submit") Back
+    form(action="../view", method="get")
+      button(class="btn btn-small btn-primary" style="position:fixed; bottom:0; right:0; margin:2em 2em 2em 2em" type="submit") Back
