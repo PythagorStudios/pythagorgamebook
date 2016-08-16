@@ -36,7 +36,7 @@ block content
       div(style="text-align: center;")
         h1 Create New Page
       form(action="../create", method="post")
-        input(type="hidden", name="type", value="")
+        input(type="hidden", name="type", value="page")
         p(style="margin:10px;") Path
           input(type="text", name="path", value="", id="newPagePathField")
         p(style="margin:10px;") Page Title
@@ -50,10 +50,8 @@ block content
               th Option Name
               th Option Path
           tbody(id="newPageOptions")
-        button(class="btn btn-small btn-primary" onclick="var table = document.getElementById('newPageOptions'); var tableRow = table.insertRow(table.rows.length); var c0 = tableRow.insertCell(0); var c1 = tableRow.insertCell(1); var c2 = tableRow.insertCell(2); var c2 = tableRow.insertCell(2); var t1 = document.createElement('input'); var t2 = document.createElement('input'); t1.type = 'text'; t2.type = 'text'; t1.id = table.rows.length; t1.name = 'name'; t2.id = table.rows.length; t2.name = 'name'; c0.appendChild(t1); c1.appendChild(t2);") Add Option
+        button(class="btn btn-small btn-primary" type="button" style="margin:1em 1em 1em 1em" onclick="var table = document.getElementById('newPageOptions'); if (table.rows.length < 5) {var tableRow = table.insertRow(table.rows.length); var c0 = tableRow.insertCell(0); var c1 = tableRow.insertCell(1); var c2 = tableRow.insertCell(2); var c2 = tableRow.insertCell(2); var t1 = document.createElement('input'); var t2 = document.createElement('input'); t1.type = 'text'; t2.type = 'text'; t1.name = 'n' + table.rows.length; t2.name = 'p' + table.rows.length; c0.appendChild(t1); c1.appendChild(t2);} else { alert('Maximum 5 options'); }") Add Option
+          button(class="btn btn-small btn-primary" style="margin:1em 1em 1em 1em" type="submit") Create
 
-        input(type="hidden", name="options", value="[]")
-        input(type="hidden", name="optionLinks", value="[]")
-        button(class="btn btn-small btn-primary" type="submit") Create
       form(action="../view", method="get")
         button(class="btn btn-small btn-primary" style="position:fixed; bottom:0; right:0; margin:2em 2em 2em 2em" type="submit") Back
