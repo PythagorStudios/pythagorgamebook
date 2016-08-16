@@ -18,7 +18,7 @@ block content
           tr
             td #{page.id}
             td #{page.path}
-              button(class="btn btn-small btn-primary" onclick="var textBox = document.getElementById('newPagePathField'); textBox.value='#{page.path}/?'; textBox.focus(); textBox.setSelectionRange(textBox.value.length - 1,textBox.value.length);") Add Child
+              button(class="btn btn-small btn-primary" onclick="document.getElementById('newPageFormDiv').style.display = 'unset'; var textBox = document.getElementById('newPagePathField'); textBox.value='#{page.path}/?'; textBox.focus(); textBox.setSelectionRange(textBox.value.length - 1,textBox.value.length);") Add Child
             td #{page.json}
             td #{page.dateCreated}
             td #{page.views}
@@ -32,7 +32,7 @@ block content
               form(action="delete/#{page.id}", method="get")
                 button(class="btn btn-small btn-primary" type="submit" disabled) Delete
     br
-    div(style="padding:30px")
+    div(style="padding:30px; display:none", id="newPageFormDiv")
       div(style="text-align: center;")
         h1 Create New Page
       form(action="../create", method="post")
