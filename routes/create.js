@@ -19,6 +19,13 @@ router.post('/', function(req, res) {
       });
     }
   }
+  else if (req.body.type == "delpage")
+  {
+    if (req.body.id != null)
+    {
+      utility.query("DELETE FROM Pages WHERE id=" + req.body.id + ";", function() { console.log("Tried to delete page with id " + req.body.id + "."); res.redirect('back'); });
+    }
+  }
   else if (req.body.type == "page")
   {
     if (utility.isAnyNullOrEmpty([req.body.path, req.body.title, req.body.text])) {
@@ -26,7 +33,7 @@ router.post('/', function(req, res) {
       res.redirect('view');
     }
     else {
-      console.log("Valid page post")
+      console.log("Valid page post");
       var json = {};
       json.title = req.body.title;
       json.text = req.body.text;
