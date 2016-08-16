@@ -2,7 +2,6 @@ extends layout
 block content
     div(style="text-align: center;")
       h1 #{gameBook.title}
-      button(class="btn btn-small btn-primary" onclick="document.getElementById('newPageFormDiv').style.display = 'unset'; var textBox = document.getElementById('newPagePathField'); textBox.value = #{gameBook.id}; textBox.focus();") Add Empty Page
     table(class="table table-striped")
       thead
         tr
@@ -32,6 +31,9 @@ block content
             td
               form(action="delete/#{page.id}", method="get")
                 button(class="btn btn-small btn-primary" type="submit" disabled) Delete
+    br
+    div(style="text-align: center;")
+      button(class="btn btn-small btn-primary" onclick="document.getElementById('newPageFormDiv').style.display = 'unset'; var textBox = document.getElementById('newPagePathField'); textBox.value = #{gameBook.id}; textBox.focus();") Add Empty Page
     br
     div(style="padding:30px; display:none", id="newPageFormDiv")
       div(style="text-align: center;")
