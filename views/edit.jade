@@ -1,7 +1,8 @@
 extends layout
 block content
     div(style="text-align: center;")
-        h1 #{gameBook.title}
+      h1 #{gameBook.title}
+      button(class="btn btn-small btn-primary" onclick="document.getElementById('newPageFormDiv').style.display = 'unset'; var textBox = document.getElementById('newPagePathField'); textBox.value = #{gameBook.id}; textBox.focus();") Add Empty Page
     table(class="table table-striped")
       thead
         tr

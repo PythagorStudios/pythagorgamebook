@@ -78,8 +78,8 @@
       <file leaf-file-name="edit.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/edit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8076336">
-              <caret line="53" column="151" selection-start-line="53" selection-start-column="151" selection-end-line="53" selection-end-column="151" />
+            <state vertical-scroll-proportion="0.10992366">
+              <caret line="4" column="234" selection-start-line="4" selection-start-column="234" selection-end-line="4" selection-end-column="234" />
               <folding />
             </state>
           </provider>
@@ -502,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/edit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8076336">
-          <caret line="53" column="151" selection-start-line="53" selection-start-column="151" selection-end-line="53" selection-end-column="151" />
+        <state vertical-scroll-proportion="0.10992366">
+          <caret line="4" column="234" selection-start-line="4" selection-start-column="234" selection-end-line="4" selection-end-column="234" />
           <folding />
         </state>
       </provider>
