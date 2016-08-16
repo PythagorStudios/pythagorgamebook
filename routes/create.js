@@ -23,7 +23,9 @@ router.post('/', function(req, res) {
   {
     if (req.body.id != null)
     {
-      utility.query("DELETE FROM Pages WHERE id=" + req.body.id + ";", function() { console.log("Tried to delete page with id " + req.body.id + "."); res.redirect('back'); });
+      utility.query("DELETE FROM Pages WHERE id=" + req.body.id + ";", function() {
+        console.log("Tried to delete page with id " + req.body.id + ".");
+        res.send('SUCCESS'); });
     }
   }
   else if (req.body.type == "page")
